@@ -4,6 +4,8 @@ import ProdutoPage from "../support/page_objects/produto.page"
 import CarrinhoPage from "../support/page_objects/Carrinho.page"
 import CheckoutPage from "../support/page_objects/Checkout.page"
 const produtos = require('../fixtures/produtos.json')
+const checkout = require('../fixtures/checkout.json')
+
 
 describe('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
@@ -34,10 +36,18 @@ describe('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         }
 
         CarrinhoPage.validarCarrinho(produtos, quantidadeCarrinho)
-        CheckoutPage.realizarCheckout()
-
-        
-        
+        CheckoutPage.realizarCheckout(checkout.nome, 
+            checkout.sobrenome,
+            checkout.empresa,
+            checkout.pais,
+            checkout.endereco,
+            checkout.complementar,
+            checkout.cidade,
+            checkout.estado,
+            checkout.cep,
+            checkout.telefone,
+            checkout.email
+        )
     });
 
 

@@ -1,0 +1,13 @@
+{
+        "nome": "Teste",
+        "sobrenome": "Qualitativo",
+        "empresa": "TesteInternacional",
+        "pais": "Brasil",
+        "endereco": "Av Paulista",
+        "complementar": "Unidade 01",
+        "cidade": "São Paulo",
+        "estado": "São Paulo",
+        "cep": "01310-000",
+        "telefone": "99999-9999",
+        "email": "teste_aluno11@teste.com"
+}
