@@ -26,8 +26,9 @@
 
 
 Cypress.Commands.add('login', (usuario, senha) => {
-    cy.get('#username').type(usuario)
-    cy.get('#password').type(senha, {log: false})
-    cy.get('.woocommerce-form > .button').click()
-});
+    cy.get('[name="username"]').type(usuario)
+    cy.get('.woocommerce-form > :nth-child(2) > [name="password"]').type(senha, {log: false})
+    cy.get('[name="login"]').click()
+    cy.get('a > .hidden-xs').should('contain', 'Welcome teste_aluno11 !')
+})
 
